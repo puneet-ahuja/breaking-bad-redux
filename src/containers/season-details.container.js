@@ -14,7 +14,7 @@ const getVisibleEpisodes = createSelector(
     filterSelector , episodesSelector ,
     (filter , episodes) =>{
     return episodes.filter(
-        (episode) => episode.title.startsWith(filter)
+        (episode) => episode.title.toUpperCase().startsWith(filter.toUpperCase())
     );
 }
 );

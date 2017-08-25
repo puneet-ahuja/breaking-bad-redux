@@ -2,6 +2,7 @@ import React from "react";
 import Episode from './episode.component';
 import ModalContent from './modal-content.component';
 import { Link, Route } from 'react-router-dom';
+import NoDataComponent from './noData.component';
 
 import './season-details.component.css';
 
@@ -136,8 +137,9 @@ class SeasonDetails extends React.Component {
 
     render() {
 
-        let episodes = this.props.visibleEpisodes
-            .map((episode) => <Episode key={episode.id} episode={episode} onEditClick={this.onEditClick.bind(this)} />);
+        let episodes = (this.props.visibleEpisodes && this.props.visibleEpisodes.length > 0)?
+            this.props.visibleEpisodes.map((episode) => <Episode key={episode.id} episode={episode} onEditClick={this.onEditClick.bind(this)} />):
+            <NoDataComponent/>;
         return (
             <div>
                 <h1 className="season-title">{this.props.title}</h1>
