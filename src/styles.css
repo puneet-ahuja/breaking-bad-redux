@@ -1,0 +1,120 @@
+
+body{
+    background-color : #F0F8FF;
+    /*background-image: url("https://wallpaperscraft.com/image/green_background_texture_solid_color_65793_1920x1080.jpg");*/
+}
+
+#cover-photo{
+    height:100%;
+    width:100%;
+}
+
+
+.search-episode{
+    height: 50px;
+    width : 50px;
+    float:right;
+    margin-right : 50px;
+}
+.search-icon-image{
+    height:100%;
+    width:100%;
+
+}
+
+#search-container{
+    position:relative;
+    height:50px;
+    width:auto;
+}
+
+
+
+.search-box,.close-icon,.search-wrapper {
+	position: relative;
+	padding: 10px;
+}
+.search-wrapper {
+	width: 500px;
+	margin: auto;
+	margin-top: 50px;
+}
+.search-box {
+	width: 80%;
+	border: 1px solid #ccc;
+  outline: 0;
+  border-radius: 15px;
+}
+.search-box:focus {
+	box-shadow: 0 0 15px 5px #b0e0ee;
+	border: 2px solid #bebede;
+}
+.close-icon {
+	border:1px solid transparent;
+	background-color: transparent;
+	display: inline-block;
+	vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+}
+.close-icon:after {
+	content: "X";
+	display: block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	background-color: #FA9595;
+	z-index:1;
+	right: 35px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 2px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	box-shadow: 0 0 2px #E50F0F;
+	cursor: pointer;
+}
+.search-box:not(:valid) ~ .close-icon {
+	display: none;
+}
+
+
+#hidden-overlay{
+            height : '0%';
+            width : '0%';
+            opacity : 0.2;
+            z-index : -1;
+}
+
+#visible-overlay{
+             position :fixed;
+            height : 100%;
+            width : 100%;
+            top : 0%;
+            left:0%;
+            background-color:black;
+            opacity : 0.4;
+            z-index : 4;
+}
+#hidden-popup{
+    position :fixed;
+            height : '0%';
+            width : '0%';
+            opacity : 1;
+            z-index : -1;
+}
+
+#visible-popup{
+            position :fixed;
+            top : 25%;
+            left:25%;
+            height : 50%;
+            width : 50%;
+            opacity : 1;
+            background-color:white;
+            z-index : 10;
+}

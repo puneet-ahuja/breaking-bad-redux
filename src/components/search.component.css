@@ -1,0 +1,21 @@
+.input-search{
+    height : 30px;
+    border-radius : 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 200px;
+    font-size : 14px;
+}
+
+.input-search:focus{
+    border : 0px;
+    border-style: none;
+}
+
+.search-button{
+
+    height : 30px;
+    border-radius : 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 70px;
+    margin-left : 10px;
+}
